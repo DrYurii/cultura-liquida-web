@@ -14,23 +14,11 @@ import ConsoleErrorHandler from '@/app/components/ConsoleErrorHandler/ConsoleErr
 import { isProd } from '@/helpers/constants'
 
 const mohave = localFont({
-  src: [
-    {
-      path: "./fonts/Mohave-VariableFont_wght.ttf",
-      weight: "100 900",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Mohave-Italic-VariableFont_wght.ttf",
-      weight: "100 900",
-      style: "italic",
-    },
-  ],
+  src: "./fonts/Mohave-VariableFont_wght.ttf",
   variable: "--font-mohave",
+  weight: "100 900",
   display: 'swap',
   preload: true,
-  adjustFontFallback: 'Arial',
-  fallback: ['system-ui', 'arial', 'sans-serif'],
 });
 
 const criticalCSS = `
@@ -115,7 +103,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </>
         )}
       </head>
-      <body style={{ margin: 0 }}>
+      <body className={mohave.variable} style={{ margin: 0 }}>
          <StyledRegistry>
            <GlobalStyle />
              <ReduxProvider>
