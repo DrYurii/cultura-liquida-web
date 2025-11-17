@@ -24,10 +24,10 @@ importers:
         specifier: ^0.0.32
         version: 0.0.32(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@reduxjs/toolkit':
-        specifier: ^2.3.0
+        specifier: ^2.10.1
         version: 2.10.1(react-redux@9.2.0(@types/react@19.2.5)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       antd:
-        specifier: ^5.21.2
+        specifier: ^5.29.0
         version: 5.29.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       bcrypt:
         specifier: ^5.1.1
@@ -36,16 +36,16 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       dayjs:
-        specifier: ^1.11.13
+        specifier: ^1.11.19
         version: 1.11.19
       mercadopago:
-        specifier: ^2.0.15
+        specifier: ^2.10.0
         version: 2.10.0
       mongodb:
-        specifier: ^6.9.0
+        specifier: ^6.21.0
         version: 6.21.0
       mongoose:
-        specifier: ^8.7.0
+        specifier: ^8.20.0
         version: 8.20.0
       next:
         specifier: 16.0.3
@@ -57,20 +57,20 @@ importers:
         specifier: 19.2.0
         version: 19.2.0(react@19.2.0)
       react-redux:
-        specifier: ^9.1.2
+        specifier: ^9.2.0
         version: 9.2.0(@types/react@19.2.5)(react@19.2.0)(redux@5.0.1)
       resend:
-        specifier: ^4.1.1
+        specifier: ^4.8.0
         version: 4.8.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       sharp:
-        specifier: ^0.34.3
+        specifier: ^0.34.5
         version: 0.34.5
       styled-components:
-        specifier: ^6.1.13
+        specifier: ^6.1.19
         version: 6.1.19(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       '@types/node':
-        specifier: ^22.8.5
+        specifier: ^22.19.1
         version: 22.19.1
       '@types/react':
         specifier: 19.2.5
@@ -82,7 +82,7 @@ importers:
         specifier: 16.0.3
         version: 16.0.3(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1)(typescript@5.9.3)
       typescript:
-        specifier: ^5.6.3
+        specifier: ^5.9.3
         version: 5.9.3
 
 packages:
@@ -4143,7 +4143,7 @@ snapshots:
       eslint: 9.39.1
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1))(eslint@9.39.1)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1))(eslint@9.39.1))(eslint@9.39.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.1)
       eslint-plugin-react: 7.37.5(eslint@9.39.1)
       eslint-plugin-react-hooks: 7.0.1(eslint@9.39.1)
@@ -4176,7 +4176,7 @@ snapshots:
       tinyglobby: 0.2.15
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1))(eslint@9.39.1))(eslint@9.39.1)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -4191,7 +4191,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint@9.39.1))(eslint@9.39.1))(eslint@9.39.1):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.47.0(eslint@9.39.1)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
