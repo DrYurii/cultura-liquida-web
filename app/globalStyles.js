@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: var(--font-mohave);
+    /* Font is applied via className on html element */
     background-color: #333;
     margin-top: 0;
     overflow-x: hidden;

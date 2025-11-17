@@ -14,16 +14,27 @@ import ConsoleErrorHandler from '@/app/components/ConsoleErrorHandler/ConsoleErr
 import { isProd } from '@/helpers/constants'
 
 const mohave = localFont({
-  src: "./fonts/Mohave-VariableFont_wght.ttf",
+  src: [
+    {
+      path: "./fonts/Mohave-VariableFont_wght.ttf",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Mohave-Italic-VariableFont_wght.ttf",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
   variable: "--font-mohave",
-  weight: "100 900",
   display: 'swap',
   preload: true,
+  adjustFontFallback: 'Arial',
+  fallback: ['system-ui', 'arial', 'sans-serif'],
 });
 
 const criticalCSS = `
   body {
-    font-family: var(--font-mohave);
     background-color: #333;
     margin-top: 0;
     overflow-x: hidden;
@@ -73,7 +84,7 @@ export const metadata = {
   
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" className={mohave.variable}>
       <head>
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -104,7 +115,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </>
         )}
       </head>
-      <body className={`${mohave.variable}`} style={{ margin: 0 }}>
+      <body style={{ margin: 0 }}>
          <StyledRegistry>
            <GlobalStyle />
              <ReduxProvider>
