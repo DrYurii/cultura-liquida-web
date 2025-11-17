@@ -1,7 +1,7 @@
 import React from 'react';
-import localFont from "next/font/local";
 import Script from 'next/script';
-import { GlobalStyle } from '@/app/globalStyles';
+import { GlobalStyle } from '@/app/ui/globalStyles';
+import { headInlineCSS } from '@/app/ui/headInlineCSS';
 import StyledRegistry from '@/lib/registry';
 import { ReduxProvider } from "@/lib/redux/providers/ReduxProvider";
 import HeaderComponent from '@/app/components/HeaderComponent/HeaderComponent'
@@ -12,31 +12,7 @@ import DataProvider from '@/app/components/DataProvider/DataProvider'
 import ErrorBoundary from '@/app/components/ErrorBoundary/ErrorBoundary'
 import ConsoleErrorHandler from '@/app/components/ConsoleErrorHandler/ConsoleErrorHandler'
 import { isProd } from '@/helpers/constants'
-
-const mohave = localFont({
-  src: "./fonts/Mohave-VariableFont_wght.ttf",
-  variable: "--font-mohave",
-  weight: "100 900",
-  display: 'swap',
-  preload: true,
-});
-
-const criticalCSS = `
-  body {
-    background-color: #333;
-    margin-top: 0;
-    overflow-x: hidden;
-    contain: layout style;
-  }
-  main {
-    background-color: #333;
-    color: #fff;
-    contain: layout style;
-  }
-  * {
-    box-sizing: border-box;
-  }
-`;
+import { mohave } from '@/app/ui/fonts';
 
 export const metadata = {
   title: "Cultura Líquida",
@@ -80,7 +56,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
         {/* Critical CSS inline */}
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
+        <style dangerouslySetInnerHTML={{ __html: headInlineCSS }} />
         
         {/* Defer non-critical scripts */}
         {isProd && (

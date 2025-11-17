@@ -6,10 +6,10 @@ import { useAppDispatch, useAppSelector } from '@/lib/redux/store/hooks'
 import type { NavigationProps } from '@/types/types'
 import NavigationComponent from '@/app/components/NavigationComponent'
 
-import Logo from '@/app/icons/logo_full 1.svg'
-import CartIcon from '@/app/icons/icon_cart.svg'
-import BurgerIcon from '@/app/icons/icon_burger.svg'
-import CloseBurgerIcon from '@/app/icons/icon_close_burger.svg'
+import Logo from '@/app/ui/icons/logo_full 1.svg'
+import CartIcon from '@/app/ui/icons/icon_cart.svg'
+import BurgerIcon from '@/app/ui/icons/icon_burger.svg'
+import CloseBurgerIcon from '@/app/ui/icons/icon_close_burger.svg'
 
 import {
   LogoFull,

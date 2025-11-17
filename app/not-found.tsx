@@ -3,7 +3,7 @@
 import React, { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import img404 from '@/app/icons/404error.svg'
+import img404 from '@/app/ui/icons/404error.svg'
 import styled from 'styled-components'
 import ArrowPrev from '@/app/components/IconComponents/ArrowPrev'
 

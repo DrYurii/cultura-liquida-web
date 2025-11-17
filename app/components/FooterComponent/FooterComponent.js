@@ -5,7 +5,7 @@ import Tg from '@/app/components/IconComponents/TgIcon'
 import Wa from '@/app/components/IconComponents/WaIcon'
 import Ph from '@/app/components/IconComponents/PhIcon'
 import Inst from '@/app/components/IconComponents/InstIcon'
-import Logo from '@/app/icons/logo_full 1.svg'
+import Logo from '@/app/ui/icons/logo_full 1.svg'
 import {
   LogoFull,
   LogoItself,

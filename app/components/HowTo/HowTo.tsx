@@ -1,7 +1,7 @@
 import React, { Fragment, FC } from 'react'
 import { howToCardsData } from '@/app/data'
 import Image from 'next/image'
-import arrowNext from '@/app/icons/arrow_next.svg'
+import arrowNext from '@/app/ui/icons/arrow_next.svg'
 
 import {
   HowToSection,

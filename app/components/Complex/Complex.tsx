@@ -7,9 +7,9 @@ import { useGetProductQuery } from "@/lib/redux/slices/api";
 import { uniqueTitles } from '@/app/components/helpers'
 import LoadingComponent from '@/app/components/LoadingComponent/LoadingComponent'
 
-import imgC9 from '@/app/icons/CL-703.png'
-import imgC10 from '@/app/icons/CL-71M.png'
-import imgC from '@/app/icons/arrow_next.svg'
+import imgC9 from '@/app/ui/icons/CL-703.png'
+import imgC10 from '@/app/ui/icons/CL-71M.png'
+import imgC from '@/app/ui/icons/arrow_next.svg'
 import {
   ComplexSection,
   AllWrap,

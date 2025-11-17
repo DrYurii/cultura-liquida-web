@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Counter from '@/app/components/Counter/Counter'
-import img6 from '@/app/icons/delete_good_from_cart.svg'
+import img6 from '@/app/ui/icons/delete_good_from_cart.svg'
 import { useAppDispatch, useAppSelector } from '@/lib/redux/store/hooks'
 import { removeFromCart } from '@/lib/redux/slices/cartSlice'
 import type { CartItemType } from '@/types/types'
@@ -23,11 +23,11 @@ import {
     OrderedX
   } from './styled'
 
-import melenaCapsulsSrc from '@/app/icons/icon_caps_melena_cart.png'
-import melenaExtractSrc from'@/app/icons/icon_melena_cart.png'
-import colaSrc from '@/app/icons/icon_cola_cart.png'
-import reishiSrc from '@/app/icons/icon_reishi_cart.png'
-import complexSrc from '@/app/icons/icon_complejo_cart.png'
+import melenaCapsulsSrc from '@/app/ui/icons/icon_caps_melena_cart.png'
+import melenaExtractSrc from'@/app/ui/icons/icon_melena_cart.png'
+import colaSrc from '@/app/ui/icons/icon_cola_cart.png'
+import reishiSrc from '@/app/ui/icons/icon_reishi_cart.png'
+import complexSrc from '@/app/ui/icons/icon_complejo_cart.png'
 
 
 const CartItemComponent: FC<CartItemType> = ( item ) => {

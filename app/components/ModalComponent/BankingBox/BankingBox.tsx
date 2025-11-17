@@ -1,7 +1,7 @@
 import React, { FC, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Tooltip } from 'antd'
-import copyBtn from '@/app/icons/copyBtn.svg'
+import copyBtn from '@/app/ui/icons/copyBtn.svg'
 import {
   BankInfoBlock,
   BankInfoText,

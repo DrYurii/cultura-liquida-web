@@ -6,7 +6,7 @@ import { useGetProductQuery } from "@/lib/redux/slices/api";
 
 import type { NavigationProps } from '@/types/types'
 import { uniqueTitles } from '@/app/components/helpers'
-import CloseBurgerIcon from '@/app/icons/icon_close_burger.svg'
+import CloseBurgerIcon from '@/app/ui/icons/icon_close_burger.svg'
 
 import {
   Navigation,
