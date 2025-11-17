@@ -1,7 +1,9 @@
 import React from 'react';
 import Script from 'next/script';
+import type { Metadata } from 'next';
 import { GlobalStyle } from '@/app/ui/globalStyles';
 import { headInlineCSS } from '@/app/ui/headInlineCSS';
+import { siteMetadata } from '@/app/ui/metadata';
 import StyledRegistry from '@/lib/registry';
 import { ReduxProvider } from "@/lib/redux/providers/ReduxProvider";
 import HeaderComponent from '@/app/components/HeaderComponent/HeaderComponent'
@@ -14,50 +16,20 @@ import ConsoleErrorHandler from '@/app/components/ConsoleErrorHandler/ConsoleErr
 import { isProd } from '@/helpers/constants'
 import { mohave } from '@/app/ui/fonts';
 
-export const metadata = {
-  title: "Cultura Líquida",
-  description: "Potencia tu salud con hongos medicinales",
-  author: "Cultura Líquida Team",
-  copyright: "© 2025 Cultura Líquida. All rights reserved.",
-  robots: {
-    index: true,
-    follow: true, 
-  },
-  link:{
-    rel:"icon",
-    href:"./favicon.ico",
-    sizes:"any"
-  },
-  alternates: {
-    canonical: 'https://www.cultura-liquida.com/product/melena-de-leon-capsules',
-  },
-  openGraph: {
-    title: "Cultura Líquida",
-    description: "Potencia tu salud con hongos medicinales",
-    url: 'https://www.cultura-liquida.com',
-    siteName: 'Cultura Líquida',
-    locale: 'es_ES',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Cultura Líquida",
-    description: "Potencia tu salud con hongos medicinales",
-  },
-};
+export const metadata: Metadata = siteMetadata;
   
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={mohave.variable}>
       <head>
-        {/* Preconnect to external domains for faster loading */}
+        {/* Preconnect links - must be in head for early connection */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
         {/* Critical CSS inline */}
         <style dangerouslySetInnerHTML={{ __html: headInlineCSS }} />
-        
+      </head>
+      <body className={mohave.variable} style={{ margin: 0 }}>
         {/* Defer non-critical scripts */}
         {isProd && (
           <>
@@ -78,8 +50,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </Script>
           </>
         )}
-      </head>
-      <body className={mohave.variable} style={{ margin: 0 }}>
          <StyledRegistry>
            <GlobalStyle />
              <ReduxProvider>

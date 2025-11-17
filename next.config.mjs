@@ -13,16 +13,6 @@ const nextConfig = {
     },
   },
   experimental: {
-    instrumentationHook: true,
-    optimizePackageImports: ['antd', 'styled-components'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
     // Performance optimizations
     optimizeCss: true,
     optimizePackageImports: ['antd', 'styled-components', 'react', 'react-dom'],
@@ -34,6 +24,8 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  // Ensure metadata always appears in <head> for all bots/crawlers
+  htmlLimitedBots: /.*/,
   
   // Optimized image configuration
   images: {
