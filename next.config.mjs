@@ -27,6 +27,9 @@ const nextConfig = {
   // Ensure metadata always appears in <head> for all bots/crawlers
   htmlLimitedBots: /.*/,
   
+  // Use webpack instead of Turbopack (we have custom webpack config)
+  turbopack: {},
+  
   // Optimized image configuration
   images: {
     formats: ['image/webp', 'image/avif'],

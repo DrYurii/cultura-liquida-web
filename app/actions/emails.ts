@@ -1,3 +1,4 @@
+import React from "react";
 import { Resend } from "resend";
 import OrderConfirmationEmail from "@/lib/emails/OrderConfirmationEmail";
 import OrderConfirmationEmailDetailed from "@/lib/emails/OrderConfirmationEmailDetailed";
@@ -10,7 +11,7 @@ export const sendEmails = async (data): Promise<void> => {
         from: 'Cultura Líquida <mailer@cultura-liquida.com>',
         to: data?.form_data?.email,
         subject: "Confirmación de pedido",
-        react: OrderConfirmationEmail({ order: data }),
+        react: React.createElement(OrderConfirmationEmail, { order: data }),
       }).catch((err) => console.error('Error sending to client:', err));
   
       // console.log('1st resend.emails')
@@ -19,7 +20,7 @@ export const sendEmails = async (data): Promise<void> => {
         from: 'Cultura Líquida <mailer@cultura-liquida.com>',
         to: 'culturaliquidacol@gmail.com',
         subject: "Nuevo pedido",
-        react: OrderConfirmationEmailDetailed({ order: data }),
+        react: React.createElement(OrderConfirmationEmailDetailed, { order: data }),
       }).catch((err) => console.error('Error sending to vendor:', err));
 
       // console.log('2nd resend.emails')
