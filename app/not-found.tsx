@@ -9,21 +9,22 @@ import ArrowPrev from '@/app/components/IconComponents/ArrowPrev'
 const NotFound: FC = () => {
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center'}}>
-      <Wrapper>
-        <Title style={{ marginBottom: 10, textTransform: 'uppercase'}}>Página no encontrada</Title>
-        <BackLink href='/'>
-          <ArrowPrev aria-label="Back" />
-          <p style={{ marginLeft: 10, textTransform: 'uppercase'}}>Devolver</p>
-        </BackLink>
-      </Wrapper>
+    <NotFoundContainer>
+      <ContentWrapper>
+        <Wrapper>
+          <Title style={{ marginBottom: 10, textTransform: 'uppercase'}}>Página no encontrada</Title>
+          <BackLink href='/'>
+            <ArrowPrev aria-label="Back" />
+            <p style={{ marginLeft: 10, textTransform: 'uppercase'}}>Devolver</p>
+          </BackLink>
+        </Wrapper>
 
-      <img             
-        src={img404.src || img404} 
-        alt='La imagen Página no encontrada'
-        style={{ width: '606px', height: '606px' }}
-      />
-    </div>
+        <NotFoundImage             
+          src={img404.src || img404} 
+          alt='La imagen Página no encontrada'
+        />
+      </ContentWrapper>
+    </NotFoundContainer>
   )
 }
 
@@ -43,10 +44,59 @@ export const Title = styled.h2`
   }
 `
 
+const NotFoundContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px - 230px); /* 100px header + 180px HeaderLikeFooter + ~50px LastFooter */
+  width: 100%;
+  padding: 40px 20px;
+
+  @media (max-width: 850px) {
+    min-height: calc(100vh - 100px - 250px); /* Header + variable footer height (HeaderLikeFooter + LastFooter) */
+    padding: 20px;
+  }
+`
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @media (max-width: 850px) {
+    gap: 20px;
+  }
+`
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`
+
+const NotFoundImage = styled.img`
+  width: 606px;
+  height: 606px;
+  flex-shrink: 0;
+
+  @media (max-width: 850px) {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 300px;
+  }
 `
 
 export const BackLink = styled(Link)`
