@@ -165,7 +165,7 @@ export const DeleteButtonItself = styled.button`
     margin: 5px -20px;
   }
 `
-export const DeleteButtonIcon = styled(Image)`
+export const DeleteButtonIcon = styled.img`
   width: auto;
   height: auto;
 `

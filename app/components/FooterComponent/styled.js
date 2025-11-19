@@ -34,7 +34,7 @@ export const LogoFull = styled(Link)`
     margin-left: 0;
   }
 `
-export const LogoItself = styled(Image)`
+export const LogoItself = styled.img`
   width: 131px;
   height: auto;
 `

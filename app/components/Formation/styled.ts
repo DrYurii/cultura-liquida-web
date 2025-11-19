@@ -220,7 +220,7 @@ export const CheckBoxGroupInner = styled.div`
   }
 `
 
-export const Icon = styled(Image)`
+export const Icon = styled.img`
   width: 70px;
   height: 70px;
   object-fit: contain;

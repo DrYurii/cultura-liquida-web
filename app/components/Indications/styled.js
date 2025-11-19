@@ -33,7 +33,7 @@ export const IconWrapper = styled.div`
   }
 `
 
-export const IconIndications = styled(Image)`
+export const IconIndications = styled.img`
   // height: 300px;
   // width: 300px;
   object-fit: contain;

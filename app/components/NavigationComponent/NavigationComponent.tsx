@@ -54,8 +54,7 @@ const NavigationComponent: FC<NavigationProps> = ({ $isfooter, isSticky }) => {
     >
       {(showMenu && isSticky) && (
         <CloseIconNav 
-          sizes='20vh' 
-          src={CloseBurgerIcon} 
+          src={CloseBurgerIcon.src || CloseBurgerIcon} 
           onClick={() => dispatch(toggleShowMenu(false))} 
           alt="Сerrar menú"
         />

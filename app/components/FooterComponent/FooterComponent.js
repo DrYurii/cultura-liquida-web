@@ -22,7 +22,7 @@ const FooterComponent = () => {
     <FooterFull>
       <HeaderLikeFooter>
       <LogoFull href="/product/melena-de-leon-capsules"> 
-        <LogoItself src={Logo} alt="El logo de Cultura Líquida" priority />
+        <LogoItself src={Logo.src || Logo} alt="El logo de Cultura Líquida" />
       </LogoFull>
       <NavigationComponent $isfooter={true.toString()} />
       <ContactWrapper>

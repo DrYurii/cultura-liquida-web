@@ -47,7 +47,7 @@ const HeaderComponent: FC<NavigationProps> = () => {
   return (
     <HeaderFull>
       <LogoFull href="/product/melena-de-leon-capsules">
-        <LogoItself src={Logo} alt="El logotipo de Cultura Líquida" priority />
+        <LogoItself src={Logo.src || Logo} alt="El logotipo de Cultura Líquida" />
       </LogoFull>
       
       <NavigationComponent isSticky={isSticky} />
@@ -55,14 +55,13 @@ const HeaderComponent: FC<NavigationProps> = () => {
       <StickyWrapper $isSticky={isSticky}>
         <BurgerWrap onClick={() => dispatch(toggleShowMenu(!showMenu))}>
           <BurgerImage 
-            sizes='50vh' 
-            src={showMenu ? CloseBurgerIcon : BurgerIcon} 
+            src={(showMenu ? CloseBurgerIcon : BurgerIcon).src || (showMenu ? CloseBurgerIcon : BurgerIcon)} 
             alt={`El icono del menú - ${showMenu ? "cerrar" : "abrir"}`}
           />
         </BurgerWrap>
         
         <CartWrap key={highlightKey} $highlight={highlightKey > 0} onClick={() => dispatch(toggleShowCart(true))}>
-          <Cart src={CartIcon} alt="El icono del carrito" />
+          <Cart src={CartIcon.src || CartIcon} alt="El icono del carrito" />
           <CounterCartWrap>
             <Counter>
               {totalAmount}

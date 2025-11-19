@@ -2,7 +2,6 @@
 
 import React, { FC } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import img404 from '@/app/ui/icons/404error.svg'
 import styled from 'styled-components'
 import ArrowPrev from '@/app/components/IconComponents/ArrowPrev'
@@ -19,13 +18,10 @@ const NotFound: FC = () => {
         </BackLink>
       </Wrapper>
 
-      <Image             
-        src={img404} 
+      <img             
+        src={img404.src || img404} 
         alt='La imagen Página no encontrada'
-        loading="eager"
-        width={606}
-        height={606}
-        priority // hight loading priority 
+        style={{ width: '606px', height: '606px' }}
       />
     </div>
   )

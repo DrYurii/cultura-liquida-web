@@ -125,6 +125,10 @@ const nextConfig = {
     config.resolve.modules = ['node_modules'];
     config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx'];
     
+    // Note: SVG optimization - SVGs should be used as React components, not with next/image
+    // For now, SVGs will work as static imports. Components should be updated to use SVGs directly
+    // or create React component wrappers for better performance.
+    
     return config;
   },
 

@@ -107,11 +107,9 @@ const Complex: FC = () => {
                         <LearnMoreWrap key={title + `${index + 1}`.toString()}>
                           <LearnMoreText>Leer más</LearnMoreText>
                           <ArrowIcon 
-                            src={imgC} 
+                            src={imgC.src || imgC} 
                             alt='La imagen del botón' 
-                            width={15} 
-                            height={15}
-                            style={{ objectFit: 'contain' }}
+                            style={{ objectFit: 'contain', width: '15px', height: '15px' }}
                           />
                         </LearnMoreWrap>
                       </ArrowButtons>
@@ -134,11 +132,9 @@ const Complex: FC = () => {
                         >
                           <LabelContent>
                             <Icon 
-                              src={icon} 
+                              src={icon.src || icon} 
                               alt={type}
-                              width={60} 
-                              height={60}
-                              style={{ objectFit: 'contain' }}
+                              style={{ objectFit: 'contain', width: '60px', height: '60px' }}
                             />
                             <TextDesc>{type}</TextDesc>
                           </LabelContent>

@@ -79,7 +79,7 @@ const CartItemComponent: FC<CartItemType> = ( item ) => {
       {!isOrder && (
         <DeleteButtonWrap>
           <DeleteButtonItself onClick={() => handleDelete(id, cartItems, dispatch)}>
-            <DeleteButtonIcon sizes='100vh' src={img6} alt='Eliminar el artículo del producto seleccionado' width={40} height={40}/>
+            <DeleteButtonIcon src={img6.src || img6} alt='Eliminar el artículo del producto seleccionado' style={{ width: '40px', height: '40px' }}/>
           </DeleteButtonItself>
         </DeleteButtonWrap>
       )}

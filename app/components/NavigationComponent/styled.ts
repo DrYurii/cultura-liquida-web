@@ -2,7 +2,6 @@
 
 import styled, { css } from 'styled-components'
 import Link from 'next/link'
-import Image from 'next/image'
 import type { NavigationProps } from '@/types/types'
 
 export const UlItself = styled.ul<NavigationProps>`
@@ -21,7 +20,7 @@ export const LiWrap = styled.li `
   display: inline;
 `
 
-export const CloseIconNav = styled(Image)`
+export const CloseIconNav = styled.img`
   width: 25px;
   position: fixed;
   top: -5px;

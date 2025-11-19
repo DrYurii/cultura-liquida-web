@@ -1,5 +1,4 @@
 import React, { FC, useRef, useState } from 'react';
-import Image from 'next/image';
 import { Tooltip } from 'antd'
 import copyBtn from '@/app/ui/icons/copyBtn.svg'
 import {
@@ -47,12 +46,10 @@ const BankingBox: FC<BankingBoxProps> = ({ title, num, isOrder }) => {
           aria-live={showTooltip ? 'polite' : ''}
           open={showTooltip}
         >
-          <Image
-            sizes="100vw"
-            src={copyBtn}
+          <img
+            src={copyBtn.src || copyBtn}
             alt="Número de copia icon"
-            width={18}
-            height={18}
+            style={{ width: '18px', height: '18px' }}
           />
         </Tooltip>
       </BankNumberBlock>

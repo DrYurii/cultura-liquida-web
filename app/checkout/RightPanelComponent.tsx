@@ -275,12 +275,10 @@ const RightPanelComponent: FC<RightPanelInterface> = ({ data, respStatus, refetc
       >
         <StatusPanel $status={coloring}>
           <div style={{display: 'flex', padding: 27}}>
-            <Image
-              sizes="100vw"
-              src={iconing}
+            <img
+              src={iconing.src || iconing}
               alt="El pago fue exitoso"
-              width={40}
-              height={40}
+              style={{ width: '40px', height: '40px' }}
             />
             <div style={{margin: '0 15px'}}>
               <p style={{margin: 0, fontWeight: 400}}>Estado de pago:</p>

@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import type { ContactsProps } from '@/types/types'
 
 import Wa from '@/app/components/IconComponents/WaIcon'
-import Image from 'next/image'
 import payArrow from '@/app/ui/icons/icon_arrow_email.svg'
 
 import {
@@ -27,7 +26,7 @@ const Contacts: FC<ContactsProps> = ({ paymentOption, isColumn }) => (
       <MailContent>
         {!isColumn && (
         <MailImgWrapper>
-          <Image src={payArrow} alt='Después del pago envíe una captura de pantalla al correo electrónico' />
+          <img src={payArrow.src || payArrow} alt='Después del pago envíe una captura de pantalla al correo electrónico' />
         </MailImgWrapper>
         )}
 

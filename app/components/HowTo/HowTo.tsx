@@ -33,12 +33,12 @@ const HowTo: FC = () => (
         </CardsWrapper>
         {index < howToCardsData.length - 1 && (
           <First>
-            <Image src={arrowNext} alt='Luego' width={15} height={15}/>
+            <img src={arrowNext.src || arrowNext} alt='Luego' style={{ width: '15px', height: '15px' }}/>
           </First>
         )}
         {index < howToCardsData.length - 1 && index !== 1 && (
           <Second>
-            <Image src={arrowNext} alt='Luego' width={15} height={15}/>
+            <img src={arrowNext.src || arrowNext} alt='Luego' style={{ width: '15px', height: '15px' }}/>
           </Second>
         )}
       </Fragment> 

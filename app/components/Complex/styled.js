@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Image from 'next/image'
 import { Radio } from 'antd'
 
 export const ComplexSection = styled.section`
@@ -208,7 +207,7 @@ export const LearnMoreText = styled.p`
   color:#9F9F9F;
 `
 
-export const ArrowIcon = styled(Image)`
+export const ArrowIcon = styled.img`
   // width: auto;
   // margin-top: 16px;
 `
@@ -277,7 +276,7 @@ export const Item = styled.div`
   }
 `
 
-export const Icon = styled(Image)`
+export const Icon = styled.img`
   // width: 50px;
   height: auto;
   margin-left: 10px;

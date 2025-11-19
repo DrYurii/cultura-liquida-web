@@ -123,7 +123,7 @@ export const Card = styled.div`
     min-width: auto;
   }
 `
-export const BenefitIcon = styled(Image)`
+export const BenefitIcon = styled.img`
   width: auto;
   height: auto
 `

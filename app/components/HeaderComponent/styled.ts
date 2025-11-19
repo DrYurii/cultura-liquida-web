@@ -1,7 +1,6 @@
 "use client"
 
 import styled, { css, keyframes } from 'styled-components'
-import Image from 'next/image'
 import Link from 'next/link'
 import type { NavigationProps } from '@/types/types'
 import type { HTMLAttributes } from 'react'
@@ -31,7 +30,7 @@ export const HeaderFull = styled.header<NavigationProps>`
 export const LogoFull = styled(Link)`
  margin-left: 8px;
 `
-export const LogoItself = styled(Image)`
+export const LogoItself = styled.img`
   width: 131px;
   height: auto;
 `
@@ -45,7 +44,7 @@ const reusedStyles = css`
   }
 `
 
-export const Cart = styled(Image)`
+export const Cart = styled.img`
    ${reusedStyles}
 `
 
@@ -134,7 +133,7 @@ export const BurgerWrap = styled.div`
     // height: 33px;
   }
 `
-export const BurgerImage = styled(Image)`
+export const BurgerImage = styled.img`
    ${reusedStyles}
 `
 
